@@ -60,15 +60,7 @@
                             <option value="Low">Low</option>
                         </select>
                     </div>
-                    
-                    <div class="col-md-3">
-                        <label for="status" class="form-label">Status</label>
-                        <select class="form-select" id="status" name="status">
-                            <option value="Not Started">Not Started</option>
-                            <option value="In Progress" selected>In Progress</option>
-                            <option value="Completed">Completed</option>
-                        </select>
-                    </div>
+        
                     
                     <div class="col-12">
                         <label for="description" class="form-label">Description</label>
@@ -100,15 +92,25 @@
         <div class="card-header bg-light">
             <div class="d-flex justify-content-between align-items-center">
                 <h5 class="mb-0">My Tasks</h5>
-                <div class="d-flex">
-                    <input type="text" class="form-control me-2" placeholder="Search..." id="searchInput">
-                    <select class="form-select" id="statusFilter">
-                        <option value="all">All Tasks</option>
-                        <option value="Not Started">Not Started</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Completed">Completed</option>
-                    </select>
-                </div>
+               <form method="GET" action="{{ url_for('progress_log') }}" class="d-flex">
+
+    <input type="text"
+           name="search"
+           class="form-control me-2"
+           placeholder="Search tasks...">
+
+    <select name="status" class="form-select me-2">
+        <option value="All">All Tasks</option>
+        <option value="Not Started">Not Started</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Completed">Completed</option>
+    </select>
+
+    <button type="submit" class="btn btn-primary">
+        Search
+    </button>
+
+</form>
             </div>
         </div>
         <div class="card-body p-0">

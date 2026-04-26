@@ -141,7 +141,22 @@ def progress_log():
 
     user_id = session['user_id']
 
-    logs = ProgressLog.query.filter_by(user_id=user_id).all()
+    
+    logs_query = ProgressLog.query.filter_by(user_id=user_id)
+
+    
+    search = request.args.get('search')
+    status = request.args.get('status')
+
+  
+    if search:
+        logs_query = logs_query.filter(ProgressLog.title.contains(search))
+
+   
+    if status and status != "All":
+        logs_query = logs_query.filter_by(status=status)
+
+    logs = logs_query.all()
 
     total_count = len(logs)
     completed_count = len([log for log in logs if log.status == 'Completed'])
@@ -153,7 +168,6 @@ def progress_log():
         completed_count=completed_count,
         today=date.today()
     )
-
 
 
 @app.route('/complete_log/<int:id>')
@@ -178,8 +192,7 @@ def complete_log(id):
 if __name__ == "__main__":
    with app.app_context():
         print
-
-        db.drop_all()   
+  
         db.create_all()  
 
         print
