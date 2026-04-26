@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Student Task & Progress Tracker
+=======
+# StudySmart
+>>>>>>> 5e043ff10c85a92ff329a23c776549e3aca91934
 
 ## Overview
 
@@ -92,7 +96,38 @@ This project was built to strengthen skills in:
 
 ---
 
+## Screenshots
+### Index Page
+![Index](screenshots/index.html.png)
+
+### Signup Page
+![Signup](screenshots/signup.html.png)
+
+![Signup2](screenshots/signup2.html.png)
+
+### Login Page
+![Login](screenshots/login.html.png)
+
+
+### Task Management
+ ## Tasks
+![Tasks](screenshots/mytasks.png)
+
+ ## Search Tasks
+![Search Tasks](screenshots/searchtask.png)
+
+ ## Search Status
+![Search Status](screenshots/searchstatus.png)
+
+
+## OverallCompletion
+![OverallCompletion](screenshots/OverallCompletion.png)
+
 ## Author
+<<<<<<< HEAD
 
 Built by a student developer as part of a learning journey in web development.
+=======
+>>>>>>> 5e043ff10c85a92ff329a23c776549e3aca91934
 
+Built by a student developer as part of a learning journey in web development.
