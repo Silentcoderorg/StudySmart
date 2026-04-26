@@ -1,4 +1,4 @@
-# Student Task & Progress Tracker
+# StudySmart
 
 ## Overview
 
